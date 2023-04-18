@@ -1,7 +1,7 @@
 <template>
   
   <div class="MovieView">
-    <h1>Search for Current Temperature</h1> <br>
+    <u><h1>Search for Current Temperature</h1></u> <br>
 
         <!--  Search -->
     <div class="search-box">
@@ -11,7 +11,7 @@
       @keypress="sendRequest">
     </div>
       <!-- Displays direction if undefined-->
-    <div class="undefined-wwrap" v-if="weather.main == null">
+    <div class="undefined-wrap" v-if="weather.main == null">
           Input must be a location in text
     </div>
       <!-- Display API results if defined -->
@@ -27,6 +27,11 @@
   
   
 </template>
+<style scoped>
+.undefined-wrap{
+  color: #4a0905
+}
+</style>
 <script>
 export default {
 
