@@ -4,9 +4,7 @@ Used bootstrap-vue framework for the UI<br>
 Called 3 API's 2 with async in vue methods, called through mounted hook.<br>
 Rendered two API data in bootstrap's b-list-group-item and other in plain HTML<br>
 
-Bellow is a screen shot of the methods and the mounted hook
-**<img width="716" alt="image" src="https://user-images.githubusercontent.com/46868432/232613008-8a3ac5c7-0268-4715-8745-f5f8467c3698.png">
-**
+Mounted hook and Async calls are in /view/ActivityWeather.vue
 
 # outdoorsandmovie1
 
