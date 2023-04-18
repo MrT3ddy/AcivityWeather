@@ -53,13 +53,16 @@ export default {
     // normal API request through method
     async sendRequest(e){
       if (e.key == "Enter"){
-
+        try{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.searchvar}&units=imperial&&appid=${this.api_key}`)
           .then(res => {
             return res.json();
 
           }).then(this.setResults);
-          
+        }
+        catch(error){
+          console.log("Error has Occured");
+        }
       }
     },
     setResults (results) {
