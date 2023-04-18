@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Find an activity and see what Kanye says <br>
+      Find an activity and see what Kanye says. <br>
       If your up to it, check the weather! <br>
     </p>
     <h3>Options</h3>
@@ -36,6 +36,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #3283A8;
 }
 </style>

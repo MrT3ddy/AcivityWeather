@@ -10,12 +10,17 @@
       v-model="searchvar"
       @keypress="sendRequest">
     </div>
+      <!-- Displays direction if undefined-->
+    <div class="undefined-wwrap" v-if="weather.main == null">
+          Input must be a location in text
+    </div>
       <!-- Display API results if defined -->
     <div class="info-wrap" v-if="typeof weather.main != 'undefined'">
       <div class="Location"> {{ weather.name }}, {{weather.sys.country}} </div>
       <div class="Date">Today</div>
       <div class="temp">{{ weather.main.temp }}°</div>
     </div>
+    
   </div>
   
   
