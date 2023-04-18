@@ -44,6 +44,16 @@ export default{
         .then ( res => {
           this.activity = res.data.activity;
         })
+        .catch((error) => { // error is handled in catch block
+          if (error.response) { // status code out of the range of 2xx
+            console.log("Data :" , error.response.data);
+            console.log("Status :" + error.response.status);
+          } else if (error.request) { // The request was made but no response was received
+            console.log(error.request);
+          } else {// Error on setting up the request
+            console.log('Error', error.message);
+          }
+        })
       },
 
       // request for Quote
@@ -53,7 +63,17 @@ export default{
         .then ( res => {
           this.quote2 = res.data.quote;
         })
-      }
+        .catch((error) => { // error is handled in catch block
+          if (error.response) { // status code out of the range of 2xx
+            console.log("Data :" , error.response.data);
+            console.log("Status :" + error.response.status);
+          } else if (error.request) { // The request was made but no response was received
+            console.log(error.request);
+          } else {// Error on setting up the request
+            console.log('Error', error.message);
+          }
+        })}
+
     },
     // calling methods in the mounted hook
     mounted() {
