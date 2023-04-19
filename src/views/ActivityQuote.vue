@@ -50,8 +50,8 @@ export default{
       async getActivity () {
 
         const URL = "https://www.boredapi.com/api/activity"
+        
         const res = await axios.get(URL)
-
         .catch((error) => { // error is handled in catch block
           if (error.response) { // status code out of the range of 2xx
             console.log("Data :" , error.response.data);
@@ -63,8 +63,7 @@ export default{
           }
         })
 
-        return new Promise(resolve => {
-
+        new Promise(resolve => {
           setTimeout(() => {
             this.activity = res.data.activity;
             this.activityLoaded=true;
